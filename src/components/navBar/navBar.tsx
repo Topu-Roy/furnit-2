@@ -22,9 +22,10 @@ type Props = {
 
 export default function NavBar({ session }: Props) {
   return (
-    <header className="fixed top-0 z-50 flex h-[5.5rem] w-[100vw] items-center justify-center bg-white px-2 shadow-md shadow-black/5 dark:bg-black dark:text-white">
+    // <header className="fixed top-0 z-50 flex h-[10vh] w-[100vw] items-center justify-center bg-white px-2 shadow-md shadow-black/5 dark:bg-black dark:text-white">
+    <header className="flex h-[10vh] w-[100vw] items-center justify-center border-b border-border bg-white px-2 shadow-md shadow-black/5 dark:bg-black dark:text-white">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="">
+        <div>
           <Link href="/" className="flex items-center justify-start gap-2">
             <Image src={LogoIcon} alt="furnit" className="-mt-3 h-[45px] w-auto" />
             <Image src={LogoText} alt="furnit" className="h-[25px] w-auto" />

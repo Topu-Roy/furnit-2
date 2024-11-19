@@ -1,29 +1,21 @@
-"use client";
+import NavBar from "@/components/navBar/navBar";
+import { RenderShop } from "@/components/shop/renderShop";
+import { ShopSidebar } from "@/components/shop/sideBar";
+import { auth } from "@/server/auth";
 
-import { useShopQuery } from "@/query/query";
-import type { Category, Color, Tag } from "@prisma/client";
-import { parseAsString, useQueryState } from "nuqs";
-
-export default function ShopPage() {
-  const [selectedCategory] = useQueryState("selectedCategory", parseAsString);
-  const [selectedColor] = useQueryState("selectedColor", parseAsString);
-  const [selectedTag] = useQueryState("selectedTag", parseAsString);
-
-  const { data: products } = useShopQuery({
-    category: selectedCategory as Category | null,
-    color: selectedColor as Color | null,
-    tag: selectedTag as Tag | null,
-  });
+export default async function ShopPage() {
+  const session = await auth();
 
   return (
-    <div className="mt-[5rem] flex w-full flex-col items-center justify-start gap-[100px] bg-stone-200 pb-14 pt-4">
-      <div className="flex w-full flex-col items-center justify-start">
-        <div className="flex w-full max-w-7xl flex-col items-start justify-start gap-5 px-2 lg:pl-4 2xl:px-0 2xl:pl-0">
-          {products?.map(item => (
-            <div key={item.id} className="">
-              {item.productTitle}
-            </div>
-          ))}
+    <div className="h-screen overflow-hidden">
+      <NavBar session={session} />
+
+      <div className="container mx-auto flex h-[90vh] w-full">
+        <aside className="w-[20%] border-r border-border bg-background">
+          <ShopSidebar />
+        </aside>
+        <div className="h-full flex-1 overflow-y-scroll">
+          <RenderShop />
         </div>
       </div>
     </div>

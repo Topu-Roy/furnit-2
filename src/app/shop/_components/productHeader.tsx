@@ -7,9 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useShopStore } from "@/zustand/shop/shopStore";
 import { Filter, X } from "lucide-react";
-import ColorSelector from "./colorSelector";
-import Catagories from "./catagories";
-import ProductTag from "./productTag";
+import ColorSelector from "../../../components/shop/colorSelector";
+import Catagories from "../../../components/shop/categorySelector";
+import ProductTag from "../../../components/shop/productTagSelector";
 import { type Product } from "@prisma/client";
 
 type SortingMethodType = "default" | "price";

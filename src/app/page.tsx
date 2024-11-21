@@ -7,14 +7,14 @@ import OurBenefits from "@/components/home/ourBenefits";
 import ReadBlogSection from "@/components/home/readBlogSection";
 import SecondCTA from "@/components/home/secondCTA";
 import { auth } from "@/server/auth";
-import { unstable_cache as cache } from "next/cache";
-import { db } from "@/server/db";
 import NavBar from "@/components/navBar/navBar";
+import { getAllProducts } from "@/helpers/fetchProductHelper";
 
-export const getCachedProducts = cache(async () => db.product.findMany(), ["all-products"], { revalidate: 60 * 60 * 24 });
+// export const getCachedProducts = cache(async () => db.product.findMany(), ["all-products"], { revalidate: 60 * 60 * 24 });
 
 export default async function Home() {
-  const productsPromise = getCachedProducts();
+  // const productsPromise = getCachedProducts();
+  const productsPromise = getAllProducts();
   const sessionPromise = auth();
 
   const products = await productsPromise;

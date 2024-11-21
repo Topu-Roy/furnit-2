@@ -1,7 +1,7 @@
 import { addToCartAction } from "@/actions/cartAction";
 import { getProductsByCategoryAction, getProductsQuantityByCategoryAction, getProductsQuantityByColorAction } from "@/actions/productsAction";
 import { createReviewAction } from "@/actions/reviewAction";
-import { GetShopProductsAction } from "@/actions/shopAction";
+import { GetShopProductsAction, GetShopProductsQuantityAction } from "@/actions/shopAction";
 import type { Category, Color, Tag } from "@prisma/client";
 import { useMutation, useQuery } from "@tanstack/react-query";
 
@@ -38,11 +38,20 @@ export type ShopQueryProps = {
   color: Color | null;
   category: Category | null;
   tag: Tag | null;
+  page: number;
+  itemPerPage: number;
 };
 
-export function useShopQuery({ category, color, tag }: ShopQueryProps) {
+export function useShopQuery({ category, color, tag, itemPerPage, page }: ShopQueryProps) {
   return useQuery({
-    queryKey: ["shop-products", { category, color, tag }],
-    queryFn: () => GetShopProductsAction({ category, color, tag }),
+    queryKey: ["shop-products", { category, color, tag, itemPerPage, page }],
+    queryFn: () => GetShopProductsAction({ category, color, tag, itemPerPage, page }),
+  });
+}
+
+export function useShopQuantityQuery({ category, color, tag }: Omit<ShopQueryProps, "page" | "itemPerPage">) {
+  return useQuery({
+    queryKey: ["shop-products-quantity", { category, color, tag }],
+    queryFn: () => GetShopProductsQuantityAction({ category, color, tag }),
   });
 }

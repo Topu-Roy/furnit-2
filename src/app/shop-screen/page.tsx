@@ -4,7 +4,8 @@ import { ShopSidebar } from "@/components/shop/sideBar";
 import { auth } from "@/server/auth";
 
 export default async function ShopPage() {
-  const session = await auth();
+  const sessionPromise = auth();
+  const session = await sessionPromise;
 
   return (
     <div className="h-screen overflow-hidden">

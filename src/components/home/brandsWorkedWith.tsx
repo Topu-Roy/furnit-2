@@ -1,9 +1,9 @@
 import Marquee from "react-fast-marquee";
 
-export default function BrandsWorkedWith() {
+export function BrandsWorkedWith() {
   return (
-    <section className="flex w-full flex-col items-center justify-center gap-10 bg-gray-900 py-10 sm:py-12 md:py-14 lg:py-16">
-      <Marquee className="mx-auto flex w-full max-w-7xl flex-row justify-between">
+    <section className="w-full bg-gray-900 py-10 sm:py-12 md:py-14 lg:py-16">
+      <Marquee autoFill={true} className="mx-auto flex w-full flex-row justify-between gap-10">
         <div className="mr-8 h-[50px] w-[250px] sm:mr-10 lg:mr-20">
           <svg width="220" height="48" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

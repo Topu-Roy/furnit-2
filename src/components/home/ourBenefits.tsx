@@ -31,9 +31,9 @@ export default function OurBenefits() {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full bg-white dark:bg-zinc-900">
       <div className="mx-auto max-w-7xl px-2 py-14 md:py-20">
-        <h2 className="pb-10 text-center">We guarantee the safety of your shopping</h2>
+        <h2 className="mb-8 pb-10 text-center text-3xl font-bold">We guarantee the safety of your shopping</h2>
         <div className="flex h-full w-full flex-row justify-between">
           <div className="flex w-full flex-col items-center justify-start gap-[50px] px-2 sm:px-4 lg:flex-1">
             <div className="grid h-full w-full grid-cols-2 justify-center gap-1.5">

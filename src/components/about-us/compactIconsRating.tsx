@@ -14,7 +14,7 @@ export function CompactIconsRating() {
         <Image key={`${image}-${index}`} src={image} alt="" className="h-[50px] w-[50px] rounded-[50%]" height={50} width={50} />
       ))}
       <div className="flex h-[50px] w-[50px] flex-col items-center justify-start pl-8">
-        <h2 className="flex h-[50px] w-[50px] items-center justify-center rounded-[50%] text-center">3K+</h2>
+        <h2 className="flex h-[50px] w-[50px] items-center justify-center rounded-[50%] text-center text-3xl font-bold">3K+</h2>
       </div>
     </div>
   );

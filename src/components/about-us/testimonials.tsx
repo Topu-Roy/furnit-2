@@ -131,7 +131,7 @@ const Testimonials = ({ testimonials }: Props) => {
 
   return (
     <div className="mx-auto my-auto flex flex-col items-center justify-center bg-slate-300/50 pb-10 md:pb-14 lg:pb-16">
-      <h2 className="py-10 text-center md:py-14 lg:py-16">Hear from our customers</h2>
+      <h2 className="py-10 text-center text-3xl font-bold md:py-14 lg:py-16">Hear from our customers</h2>
       <Carousel setApi={setApi} className="mx-auto w-[75%]" plugins={[Autoplay({ delay: 10000 })]}>
         <CarouselContent>
           {groupedTestimonials.map((group, index) => (

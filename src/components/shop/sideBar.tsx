@@ -22,6 +22,7 @@ export function ShopSidebar() {
   );
 }
 
+// TODO: Remove sidebar
 // export function ShopSidebar() {
 //   return (
 //     <Sidebar className="absolute bottom-0 left-0 h-[90vh]">

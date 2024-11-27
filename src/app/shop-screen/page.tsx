@@ -1,4 +1,5 @@
-import NavBar from "@/components/navBar/navBar";
+import Footer from "@/components/Footer/footer";
+import NavBar from "@/components/navBar/normalNavBar";
 import { RenderShop } from "@/components/shop/renderShop";
 import { ShopSidebar } from "@/components/shop/sideBar";
 import { auth } from "@/server/auth";
@@ -19,6 +20,8 @@ export default async function ShopPage() {
           <RenderShop />
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

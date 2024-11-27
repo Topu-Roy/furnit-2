@@ -9,10 +9,10 @@ export default function ReadBlogSection() {
   const blogsWideScreen = blogPosts.slice(0, 9);
 
   return (
-    <section className="bg-white py-10 pt-20 dark:bg-black dark:text-white">
+    <section className="bg-white py-10 pt-20 dark:bg-zinc-900 dark:text-white">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
         <div className="flex w-full flex-col items-center justify-start gap-4 pb-4">
-          <h2 className="text-center !font-semibold tracking-[-0.50px]">Read Our Latest Blog</h2>
+          <h2 className="mb-8 text-center text-3xl font-bold">Read Our Latest Blog</h2>
           <p className="text-center">
             We write various things related to furniture, from tips and what things I need to pay attention to when choosing furniture
           </p>

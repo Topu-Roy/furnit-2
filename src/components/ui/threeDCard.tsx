@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CardItem, CardBody, CardContainer } from "@/components/ui/3d-card";
+import { Button } from "./button";
 
 type Props = {
   heading: string;
@@ -14,7 +15,7 @@ type Props = {
 export default function ThreeDCard({ heading, subHeading, imageURL, imageAlt, link, linkName }: Props) {
   return (
     <CardContainer>
-      <CardBody className="group/card h-auto w-auto rounded-xl border border-black/[0.1] bg-gray-50 p-6 sm:w-[30rem] md:w-[22.5rem] lg:w-[30rem] dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]">
+      <CardBody className="group/card h-auto w-auto rounded-xl border border-black/[0.1] bg-gray-50 p-6 dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] sm:w-[30rem] md:w-[22.5rem] lg:w-[30rem]">
         <CardItem translateZ="20" className="text-xl font-bold text-neutral-600 dark:text-white">
           {heading}
         </CardItem>
@@ -31,13 +32,8 @@ export default function ThreeDCard({ heading, subHeading, imageURL, imageAlt, li
           />
         </CardItem>
         <div className="mt-20 flex w-full items-center justify-end">
-          <CardItem
-            translateZ={20}
-            as={Link}
-            href={link}
-            className="ring-primary hover:bg-primary rounded-xl px-4 py-2 text-xs font-bold ring-1 ring-black hover:text-white hover:ring-0"
-          >
-            {linkName}
+          <CardItem translateZ={20} as={Link} href={link}>
+            <Button>{linkName}</Button>
           </CardItem>
         </div>
       </CardBody>

@@ -27,10 +27,10 @@ export default function NewArrivals({ products, session }: Props) {
   };
 
   return (
-    <div className="flex w-full items-center justify-center bg-white py-10 dark:bg-black dark:text-white lg:py-16">
+    <div className="flex w-full items-center justify-center bg-orange-100 py-10 dark:bg-stone-950 dark:text-white lg:py-16">
       <div className="flex max-w-7xl flex-row justify-center">
         <div className="flex w-full flex-col items-center justify-start gap-[67px]">
-          <h2 className="!text-blue_gray-900_01 text-center tracking-[-0.50px]">New Arrival</h2>
+          <h2 className="mb-8 text-center text-3xl font-bold">New Arrival</h2>
 
           <div className="relative flex w-full flex-col gap-7">
             <Link href={`/shop`} className="absolute -top-14 right-4 z-40 md:right-0">

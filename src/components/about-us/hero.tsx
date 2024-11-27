@@ -11,7 +11,7 @@ export function AboutHero() {
         <div className="mx-auto my-auto flex w-full max-w-7xl items-center justify-between gap-4">
           <div className="flex-1">
             <div className="space-y-4 px-4 text-center md:px-0 md:text-left">
-              <h2>Provide the best quality ingredients for home products</h2>
+              <h2 className="text-center text-3xl font-bold">Provide the best quality ingredients for home products</h2>
               <p className="pb-4">
                 We believe your home reflects your story. We curate a collection of quality furniture that&apos;s both beautiful and functional,
                 helping you create spaces you love. Explore our selection and find pieces that inspire you!
@@ -25,7 +25,7 @@ export function AboutHero() {
                 <p className="font-bold text-black/70">Happy Customers</p>
                 <div className="flex flex-row items-center justify-start gap-[5px] md:w-[45%]">
                   <Rating rate={5} readonly={true} />
-                  <h2 className="text-black/70">5.0</h2>
+                  <h2 className="text-center text-3xl font-bold text-black/70">5.0</h2>
                 </div>
               </div>
               <div className="flex flex-row justify-center">
